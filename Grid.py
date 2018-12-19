@@ -1,3 +1,6 @@
+X = 5
+Y = 5
+
 class Grid():
     def __init__(self, zoo, points = None):
 
@@ -11,11 +14,9 @@ class Grid():
                 x = cell[0] + animal.x
                 y = cell[1] + animal.y
                 adj_point = (x,y)
-                if int(x) >= 5 or int(y) >= 5:# TODO FIX: hardcoded size of map
-                    #print (adj_point)
+                if int(x) >= X or int(y) >= Y:# TODO FIX: import values
                     return None
                 if adj_point in all_points:
-                    #print(adj_point, all_points)
                     return None
                 if adj_point in all_points:
                     if animal.name in all_points[adj_point]:
